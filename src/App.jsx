@@ -1,36 +1,26 @@
-import { Routes, Route, NavLink } from 'react-router-dom'
+
 import './App.css'
-import Home from './pages/Home'
+import { Routes,Route } from 'react-router-dom'
+import Nav from './components/Nav'
 import About from './pages/About'
+import Board from './pages/Board'
+import Home from './pages/Home'
 import Notfound from './pages/Notfound'
-import Company from './pages/Company'
-import AboutDetail from './pages/AboutDetail'
-import CompanyDetail from './pages/CompanyDetail'
-
-
+import BoardDetail from './pages/BoardDetail'
+import Footer from './components/Footer'
 function App() {
 
   return (
     <div>
-      <h1>라우터 실습</h1>
-      <nav>
-        <NavLink to="/home">홈</NavLink> ||
-        < NavLink to="/about">소개</ NavLink> ||
-        < NavLink to="/company">회사</ NavLink>
-
-      </nav>
-
-
+      <Nav/>
       <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/about' element={<About />} />
-          <Route path='/about/:id' element={<AboutDetail />} />
-        <Route path='/company' element={<Company />} />
-        <Route path='/company/:id' element={<CompanyDetail />} />
-        <Route path='*' element={<Notfound />} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/board' element={<Board/>}/>
+        <Route path='/board/:id' element={<BoardDetail/>}/>
+        <Route path='*' element={<Notfound/>}/>
       </Routes>
-
-
+    <Footer/>
     </div>
   )
 }

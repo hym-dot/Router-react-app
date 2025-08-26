@@ -1,42 +1,52 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ font-family: "Noto Sans KR", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ul {
+    list-style-type: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    text-decoration: none;
+    color: #505050;
+}
+section {
+    padding: 100px 20px;
+    max-width: 1440px;
+    margin: auto;
+    min-height: 80vh;
+}
+h1 {
+ font-family: "Montserrat", sans-serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ font-size: 80px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list li{
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: all .2s;
+}
+.list li a{
+  display: block;
+  /* transition: all .2s; */
+  height: 100%;
+}
+.list li:hover{
+  color: #fff;
+  background-color: #505050;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.list li:hover a{
+  color: #fff;
 }
