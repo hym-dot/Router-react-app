@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './HomeHero/css'
+import './HomeHero.css'
 import { homeSlides } from '../../data/homeSlide';
 const HomeHero = () => {
     return (
